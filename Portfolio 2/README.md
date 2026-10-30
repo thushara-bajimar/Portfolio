@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Thushara B S — Portfolio 2
 
-## Getting Started
+This is a personal portfolio prototype built with Next.js, React, and Tailwind CSS. It currently includes an introduction/hero area, an About Me section, and a set of skill tags.
 
-First, run the development server:
+## Preview
 
-```bash
+![Portfolio 2 preview placeholder](./public/SS1.png)
+![Portfolio 2 preview placeholder](./public/SS2.png)
+
+## Requirements
+
+- Node.js (a current LTS release is recommended)
+- npm, which is included with Node.js
+
+## Run locally
+
+From this folder, install dependencies and start the development server:
+
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). The page refreshes as you edit the source.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Available scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the local development server. |
+| `npm run build` | Create a production build. |
+| `npm start` | Serve the production build (run `npm run build` first). |
+| `npm run lint` | Check the project with ESLint. |
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```text
+Portfolio 2/
+├── public/             # Static files served from the site root
+├── src/
+│   └── app/
+│       ├── globals.css # Global styles and Tailwind CSS import
+│       ├── layout.js   # Root layout, fonts, and page metadata
+│       └── page.js     # Portfolio page content
+├── eslint.config.mjs   # ESLint configuration
+├── jsconfig.json       # JavaScript project configuration
+├── package.json        # Dependencies and npm scripts
+├── package-lock.json   # Locked npm dependency versions
+└── next.config.mjs     # Next.js configuration
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customize
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Update the portfolio content, navigation labels, and skills in `src/app/page.js`.
+- Adjust global styles and Tailwind theme values in `src/app/globals.css`.
+- Change the document title and description in the `metadata` export in `src/app/layout.js`.
+- Put images and other static files in `public/` and reference them with root-relative URLs.
